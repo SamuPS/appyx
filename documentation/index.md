@@ -45,3 +45,7 @@ See the [Downloads page](setup/downloads.md).
 ## How to get started?
 
 See the [Quick start guide](setup/quickstart.md).
+
+## Codelabs
+
+Check the available [Appyx Codelabs](codelabs/test.html).
