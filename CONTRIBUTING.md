@@ -58,3 +58,26 @@ INFO     -  [09:41:08] Serving on http://127.0.0.1:8000/bumble-tech/appyx/
 
 Open the url in your browser. Changes are automatically deployed by mkdocs while the server is running.
 
+
+## Codelabs
+
+Lorem ipsum
+
+### Setup
+
+- claat
+
+
+### Creating a new codelab
+
+- lorem ipsum
+
+### Generating files
+
+- script
+
+
+### Test locally
+
+Follow the Run instruction on the Documentation section of this document and navigate to 
+http://127.0.0.1:8000/bumble-tech/appyx/codelabs
