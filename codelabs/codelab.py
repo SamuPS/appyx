@@ -11,10 +11,18 @@ def parseCodelabId(lastId):
     return str(lastId).zfill(3)
 
 def generateHTML(id):
-    filePath = MD_PATH+str(id)+".md"
-    command = "claat export -o {} {}".format(DOC_PATH,filePath)
-    os.popen(command)
-    return 
+    try:
+        filePath = MD_PATH+str(id)+".md"
+        os.path.exist(filePath)
+        print("HTML will be generated for file ", codeLabFile)
+        command = "claat export -o {} {}".format(DOC_PATH,filePath)
+        os.popen(command)
+    except:
+        print("Couldn't generate files for ", filePath)
+        print("Did you provide the correct id?")
+        print("Use \"new\" to create a new codelab. Example: ./codelab.py new")
+
+    return
 
 def getCodelabId(parameters):
     if len(sys.argv) == 3:
@@ -53,9 +61,7 @@ def generatCodelab(parameters):
     codeLabId = getCodelabId(parameters)
     codeLabFile = codeLabId+".md"
     if pattern.match(codeLabFile):
-        print("HTML will be generated for file ", codeLabFile)
         generateHTML(codeLabId)
-        print(" Use \"new\" to create a new codelab. Example: ./codelab.py new")
     else:
         print("Couldn't find codelab file {}".format(codeLabFile))
         printMan()
